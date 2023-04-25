@@ -21,7 +21,7 @@ $app-direction: ltr;
 // to match your app's branding. Ionic uses a Sass map of
 // colors so you can add, rename and remove colors as needed.
 // The "primary" color is the only required color in the map.
-$colors: ( primary: #000000, secondary: #242424, success:#4a9902, danger: #f53d3d, light: #f4f4f4, dark: #222, white: #ffffff, black:#000000 );
+$colors: ( primary: #049cdb, secondary: #242424, success:#4a9902, danger: #f53d3d, light: #f4f4f4, dark: #222, white: #ffffff, black:#000000 );
 * {
     margin: 0;
     padding: 0;
@@ -4629,7 +4629,7 @@ ion-popover {
     align-self: center;
     position: relative;
     padding: 24px 10px;
-    background: #049cdb;
+    background: #f47436;
     
     
     .le-ft {
@@ -5317,5 +5317,5 @@ ion-list{
     height: 50px !important;
 }
 button.grid-indication {
-    background: #003a7f !important;
+    background: #f47436 !important;
 }

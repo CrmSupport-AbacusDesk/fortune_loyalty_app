@@ -30,13 +30,42 @@ export class DigitalcatalogPage {
     console.log('ionViewDidLoad DigitalcatalogPage');
   }
 
+
+  filter: any={};
+
   getpdflist()
   {
-   this.dbService.post_rqst({"login_id":this.dbService.karigar_id },"app_karigar/product_catalogue_list")
+    this.filter.limit=0;
+   this.dbService.post_rqst({"login_id":this.dbService.karigar_id,"filter":this.filter },"app_karigar/product_catalogue_list")
    .subscribe( r =>
      {
        console.log(r);
        this.pdf = r['pdf']
        }); 
+     }
+
+
+     
+     flag:any='';
+     loadData(infiniteScroll)
+     {
+         this.filter.limit=this.pdf.length;
+         this.dbService.post_rqst({'filter' : this.filter,'login_id':this.dbService.karigar_id},'app_karigar/product_catalogue_list')
+         .subscribe( (r) =>
+         {
+             console.log(r);
+             if(r=='')
+             {
+                 this.flag=1;
+             }
+             else
+             {
+                 setTimeout(()=>{
+                     this.pdf=this.pdf.concat(r['pdf']);
+                     console.log('Asyn operation has stop')
+                     infiniteScroll.complete();
+                 },1000);
+             }
+         });
      }
 }

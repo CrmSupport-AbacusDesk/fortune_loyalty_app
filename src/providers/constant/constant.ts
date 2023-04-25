@@ -9,16 +9,16 @@ export class ConstantProvider {
   }
 
   // live url
-  // public rootUrl: string = 'https://apps.abacusdesk.com/jagdambaplywood/dd_api/';  
-  // public server_url: string = this.rootUrl + 'index.php/app/';
-  // public upload_url: string ='https://apps.abacusdesk.com/jagdambaplywood/dd_api/app/uploads/';
+  public rootUrl: string = 'https://apps.abacusdesk.com/fortunepaints/dd_api/';  
+  public server_url: string = this.rootUrl + 'index.php/app/';
+  public upload_url: string ='https://apps.abacusdesk.com/fortunepaints/dd_api/app/uploads/';
 
 
 
     // Testing url
-    public rootUrl: string = 'https://devcrm.abacusdesk.com/fortunepaints/dd_api/';  
-    public server_url: string = this.rootUrl + 'index.php/app/';
-    public upload_url: string ='https://devcrm.abacusdesk.com/fortunepaints/dd_api/app/uploads/';
+    // public rootUrl: string = 'https://devcrm.abacusdesk.com/fortunepaints/dd_api/';  
+    // public server_url: string = this.rootUrl + 'index.php/app/';
+    // public upload_url: string ='https://devcrm.abacusdesk.com/fortunepaints/dd_api/app/uploads/';
   
   // clonned url
   // public rootUrl: string = 'http://phpstack-83335-1175063.cloudwaysapps.com/dd_api/';  
